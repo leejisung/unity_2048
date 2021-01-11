@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &783264790121661301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 783264790121661303}
+  - component: {fileID: 783264790121661300}
+  - component: {fileID: 783264790121661302}
+  - component: {fileID: 794646719341289388}
+  m_Layer: 0
+  m_Name: can
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &783264790121661303
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783264790121661301}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -6.146474}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &783264790121661300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783264790121661301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe103ec00dcc1304abb29cb05c8446c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blank: {fileID: 21300000, guid: a038fe32d6b3d8c459d2aaf3c436ff50, type: 3}
+  num2: {fileID: 21300000, guid: 72e1bb26707f8034eaf0f1862ecc27c8, type: 3}
+  num4: {fileID: 21300000, guid: 392c53b811594464c94c9459658f632c, type: 3}
+  num8: {fileID: 21300000, guid: 6c633fb8544b79c43908db231ef6a5bb, type: 3}
+  num16: {fileID: 21300000, guid: 7e10fe4c4bba2ba429a84a0924dd87d6, type: 3}
+  num32: {fileID: 21300000, guid: 86d70decae3d92947b093d1bd10ef261, type: 3}
+  num64: {fileID: 21300000, guid: bd534aa178b65f8409bc5e29c18b0069, type: 3}
+  num128: {fileID: 21300000, guid: 9ff63df92f9ce2f459b05017c4793691, type: 3}
+  num256: {fileID: 21300000, guid: 66e6949030542c04e85c2f8bd08b79a1, type: 3}
+  num512: {fileID: 21300000, guid: 9212f3e5ee407684d8cbf5fe72b5b1db, type: 3}
+  num1024: {fileID: 21300000, guid: 59c920a7457777e43890604f80d03bde, type: 3}
+  num2048: {fileID: 21300000, guid: f96edb0a84f790a49a7fdeccd0d33c0d, type: 3}
+  y: 0
+  x: 0
+--- !u!212 &783264790121661302
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783264790121661301}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &794646719341289388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783264790121661301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92d8bbf6d86543a4f90bcb21a5c606b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPause: 0
