@@ -12,8 +12,8 @@ public class GameManager : MonoBehaviour
 
     // GameManager 에서 사용 하는 데이터
     public bool isPause = false;
-    public int[,] board = new int[4, 4] { { 2, 4, 8, 16 }, { 4, 2, 2, 2 }, { 8, 0, 0, 0 }, { 16, 0, 0, 0 } };
-
+    public int[,] board = new int[4, 4] { { 2, 2, 2, 2 }, { 4, 2, 2, 2 }, { 8, 8, 16, 0 }, { 16, 0, 4, 4 } };
+    
     public static GameManager Instance
     {
         get
