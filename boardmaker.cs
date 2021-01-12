@@ -9,6 +9,8 @@ public class boardmaker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.Instance.num_gen();
+        GameManager.Instance.num_gen();
         for (int y = 0; y < 4; y++)
         {
             for (int x = 0; x < 4; x++)

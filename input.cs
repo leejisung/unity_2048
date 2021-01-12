@@ -10,6 +10,7 @@ public class input : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             GameManager.Instance.left_key();
+            
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {

@@ -12,7 +12,39 @@ public class GameManager : MonoBehaviour
 
     // GameManager 에서 사용 하는 데이터
     public bool isPause = false;
-    public int[,] board = new int[4, 4] { { 2, 2, 2, 2 }, { 4, 2, 2, 2 }, { 8, 8, 16, 0 }, { 16, 0, 4, 4 } };
+    public int[,] board = new int[4, 4] { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
+    public bool gameover = false;
+    public void num_gen()
+    {
+        int num_count = 0;
+        List<int[]> zero_switch = new List<int[]>();
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < 4; j++)
+            {
+                if (board[i,j]==0)
+                {
+                    int[] ij = { i, j };
+                    zero_switch.Add(ij);
+                    num_count++;
+                }
+            }
+        }
+        if (num_count==0)
+        {
+            gameover = true;
+            Debug.Log("gameover");
+        }
+        else
+        {
+            int num = Random.Range(1, 3) * 2;
+            int s = Random.Range(0, num_count);
+            int y = zero_switch[s][0];
+            int x = zero_switch[s][1];
+            board[y, x] = num;
+        }
+
+    }
     public void row_reverse()
     {
         int[,] change = new int[4, 4];
@@ -37,9 +69,27 @@ public class GameManager : MonoBehaviour
         }
         board = change;
     }
+
+    public bool arr_eq(int[,]copy, int[,]board)
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < 4; j++)
+            {
+                if (board[i, j] != copy[i,j])
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
     public void left_key()
     {
+        int[,] copy = new int[4, 4]; 
+        copy = board;
         int[,] change = new int[4, 4] { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
+
         for (int i = 0; i < 4; i++)
         {
             int xx = 0;
@@ -90,6 +140,11 @@ public class GameManager : MonoBehaviour
                 board[i, 3] = 0;
             }
         }
+        if (arr_eq(copy,board)==false)
+        {
+            num_gen();
+        }
+
     }
     public static GameManager Instance
     {
@@ -110,5 +165,6 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
         }
     }
+
 }
 
