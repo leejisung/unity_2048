@@ -14,6 +14,13 @@ public class GameManager : MonoBehaviour
     public bool isPause = false;
     public int[,] board = new int[4, 4] { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
     public bool gameover = false;
+
+    public void new_game()
+    {
+        board = new int[4, 4] { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
+        num_gen();
+        num_gen();
+    }
     public void num_gen()
     {
         int num_count = 0;
@@ -155,7 +162,7 @@ public class GameManager : MonoBehaviour
     }
     void Awake()
     {
-        // Scene에 이미 인스턴스가 존재 하는지 확인 후 처리
+
         if (instance == null)
         {
             instance = this;
