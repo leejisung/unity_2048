@@ -5,13 +5,7 @@ using UnityEngine;
 public class newgame : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void OnMouseUp()
+    public void Reset_board()
     {
         GameManager.Instance.new_game();
     }

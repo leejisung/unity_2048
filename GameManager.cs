@@ -14,9 +14,10 @@ public class GameManager : MonoBehaviour
     public bool isPause = false;
     public int[,] board = new int[4, 4] { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
     public bool gameover = false;
-
+    public int score;
     public void new_game()
     {
+        score = 0;
         board = new int[4, 4] { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
         num_gen();
         num_gen();
@@ -121,6 +122,8 @@ public class GameManager : MonoBehaviour
                 board[i, 1] = num2;
                 board[i, 2] = 0;
                 board[i, 3] = 0;
+                score += num;
+                score += num2;
             }
             else if (board[i, 0] == board[i, 1])
             {
@@ -131,6 +134,7 @@ public class GameManager : MonoBehaviour
                 board[i, 1] = num2;
                 board[i, 2] = num3;
                 board[i, 3] = 0;
+                score += num;
             }
             else if (board[i, 1] == board[i, 2])
             {
@@ -139,18 +143,22 @@ public class GameManager : MonoBehaviour
                 board[i, 1] = num2;
                 board[i, 2] = num3;
                 board[i, 3] = 0;
+                score += num2;
             }
             else if (board[i, 2] == board[i, 3])
             {
                 int num3 = board[i, 3] * 2;
                 board[i, 2] = num3;
                 board[i, 3] = 0;
+                score += num3;
             }
         }
         if (arr_eq(copy,board)==false)
         {
             num_gen();
         }
+
+        Debug.Log(score);
 
     }
     public static GameManager Instance
